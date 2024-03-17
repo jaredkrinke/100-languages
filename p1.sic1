@@ -1,0 +1,152 @@
+;; Main loop
+@main_start:
+subleq @main_counter @counter_source: @counter @print_sum
+
+@main:
+subleq @sum_digit_1 @n_p_addend
+subleq @sum_digit_2 @n_p_addend
+subleq @sum_digit_3 @n_p_addend
+subleq @sum_digit_4 @n_p_addend
+subleq @addend_digit @n_p_one_digits
+subleq @add_return @n_p_increment_done
+subleq @zero @zero @add
+
+@increment_done:
+subleq @add_return @add_return
+subleq @threes_counter @one @multiple_of_three
+subleq @fives_counter @one @multiple_of_five
+subleq @zero @zero @main_end
+
+@multiple_of_three:
+subleq @threes_counter @n_three
+subleq @fives_counter @one @multiple_of_five
+subleq @zero @zero @multiple
+
+@multiple_of_five:
+subleq @fives_counter @n_five
+
+@multiple:
+subleq @sum_digit_1 @n_p_sum
+subleq @sum_digit_2 @n_p_sum
+subleq @sum_digit_3 @n_p_sum
+subleq @sum_digit_4 @n_p_sum
+subleq @addend_digit @n_p_addend
+subleq @add_return @n_p_main_end
+subleq @zero @zero @add
+
+@main_end:
+subleq @main_counter @one @advance_counter
+subleq @add_return @add_return @main
+
+;; Advance @counter
+@advance_counter:
+subleq @counter_source @n_one
+subleq @add_return @add_return @main_start
+
+;; Add two decimal numbers (each number stored one byte per decimal digits)
+;
+; Calling convention: write addresses to @sum_digit_1..4, @addend_digit;
+; write address to @add_return. Callee will clear @sum_digit_1..4 and
+; @addend_digit. Callee must clear @add_return.
+
+@add:
+subleq @digit_counter @n_digit_count
+
+; Add one set of digits and write result to @sum's digits, noting carry
+@add_digit_loop:
+subleq @digit_counter @one @add_done
+subleq @tmp @tmp
+subleq @tmp @carry
+subleq @carry @carry
+subleq @tmp @sum_digit_1: 0
+subleq @tmp @addend_digit: 0
+subleq @tmp2 @tmp2
+subleq @tmp2 @tmp
+subleq @tmp2 @nine @le10
+
+; Digit result > 10, with the amount over minus 1 in @tmp2
+@gt10:
+subleq @tmp @tmp
+subleq @tmp @tmp2
+subleq @tmp @n_one
+subleq @carry @n_one
+subleq @zero @zero @le10
+
+; Digit result < 10; write to sum and finish
+@le10:
+subleq @sum_digit_3: 0 @sum_digit_4: 0
+subleq @sum_digit_2: 0 @tmp
+subleq @zero @zero @add_digit_loop_done
+
+@add_digit_loop_done:
+subleq @sum_digit_1 @n_one
+subleq @sum_digit_2 @n_one
+subleq @sum_digit_3 @n_one
+subleq @sum_digit_4 @n_one
+subleq @addend_digit @n_one
+subleq @zero @zero @add_digit_loop
+
+@add_done:
+subleq @digit_counter @digit_counter
+subleq @sum_digit_1 @sum_digit_1
+subleq @sum_digit_2 @sum_digit_2
+subleq @sum_digit_3 @sum_digit_3
+subleq @sum_digit_4 @sum_digit_4
+subleq @addend_digit @addend_digit
+subleq @zero @zero @add_return: 0
+
+;; Print out @sum's digits
+
+@print_sum:
+subleq @digit_counter @n_digit_count
+@print_sum_loop:
+subleq @digit_counter @one @print_sum_done
+subleq @tmp @tmp
+subleq @tmp @char_zero
+subleq @tmp @print_sum_digit: @sum+6 ; Digit count - 1
+subleq @OUT @tmp
+subleq @print_sum_digit @one
+subleq @zero @zero @print_sum_loop
+
+@print_sum_done:
+subleq @zero @zero @HALT
+
+;; Values
+
+; Constants
+@n_five: .data -5
+@n_three: .data -3
+@n_one: .data -1
+@zero: .data 0
+@one: .data 1
+@nine: .data 9
+
+@char_zero: .data '0'
+
+@digit_count: .data 7
+@n_digit_count: .data -8
+
+; Constant pointers
+@n_p_sum: .data -@sum
+@n_p_addend: .data -@addend
+@n_p_one_digits: .data -@one_digits
+
+; Constant return addresses
+@n_p_increment_done: .data -@increment_done
+@n_p_main_end: .data -@main_end
+
+; Temporaries
+@tmp: .data 0
+@tmp2: .data 0
+
+; Variables
+@main_counter: .data 0
+@digit_counter: .data 0
+@threes_counter: .data 3
+@fives_counter: .data 5
+@carry: .data 0
+
+@sum: .data 0 0 0 0 0 0 0
+@addend: .data 0 0 0 0 0 0 0
+@one_digits: .data 1 0 0 0 0 0 0 ; For incrementing @addend
+@counter: .data -127 -127 -127 -127 -127 -127 -127 -110 1 ; 999

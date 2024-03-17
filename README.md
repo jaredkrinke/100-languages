@@ -7,3 +7,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 
 | # | Problem | Language | Solution |
 |--:|---|---|---|
+| 1 | [Multiples of 3 or 5](https://projecteuler.net/problem=1) | [SIC-1 Assembly Language](https://esolangs.org/wiki/SIC-1_Assembly_Language) | [p1.sic1](p1.sic1) |
