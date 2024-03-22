@@ -10,4 +10,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 1 | [Multiples of 3 or 5](https://projecteuler.net/problem=1) | [SIC-1 Assembly Language](https://esolangs.org/wiki/SIC-1_Assembly_Language) | [p1.sic1](p1.sic1) |
 | 2 | [Even Fibonacci Numbers](https://projecteuler.net/problem=2) | [SectorLISP](https://justine.lol/sectorlisp2/) | [p2.lisp](p2.lisp) |
 | 3 | [Largest Prime Factor](https://projecteuler.net/problem=3) | [Fortran](https://fortran-lang.org/) | [p3.f90](p3.f90) |
-| 4 | [Largest Palindrome Product](https://projecteuler.net/problem=4) | [J](https://www.jsoftware.com/#/) | [p4.j](p4.j) |
+| 4 | [Largest Palindrome Product](https://projecteuler.net/problem=4) | [J](https://www.jsoftware.com/#/) | [p4.ijs](p4.ijs) |
