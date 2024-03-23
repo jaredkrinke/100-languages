@@ -47,7 +47,7 @@ subleq @add_return @add_return @main_start
 ;
 ; Calling convention: write addresses to @sum_digit_1..4, @addend_digit;
 ; write address to @add_return. Callee will clear @sum_digit_1..4 and
-; @addend_digit. Callee must clear @add_return.
+; @addend_digit. Caller must clear @add_return.
 
 @add:
 subleq @digit_counter @n_digit_count
