@@ -12,4 +12,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 3 | [Largest Prime Factor](https://projecteuler.net/problem=3) | [Fortran](https://fortran-lang.org/) | [p3.f90](p3.f90) |
 | 4 | [Largest Palindrome Product](https://projecteuler.net/problem=4) | [J](https://www.jsoftware.com/#/) | [p4.ijs](p4.ijs) |
 | 5 | [Smallest Multiple](https://projecteuler.net/problem=5) | [Gforth](https://gforth.org/) | [p5.fth](p5.fth) |
-| 6 | [Sum Square Difference](https://projecteuler.net/problem=6) | [Standard ML](https://en.wikipedia.org/wiki/Standard_ML) ([SOSML](https://sosml.org/)) | [p6.ml](p6.ml) |
+| 6 | [Sum Square Difference](https://projecteuler.net/problem=6) | [Standard ML](https://en.wikipedia.org/wiki/Standard_ML) ([SOSML](https://sosml.org/)) | [p6.sml](p6.sml) |
