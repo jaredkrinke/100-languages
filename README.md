@@ -11,3 +11,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 2 | [Even Fibonacci Numbers](https://projecteuler.net/problem=2) | [SectorLISP](https://justine.lol/sectorlisp2/) | [p2.lisp](p2.lisp) |
 | 3 | [Largest Prime Factor](https://projecteuler.net/problem=3) | [Fortran](https://fortran-lang.org/) | [p3.f90](p3.f90) |
 | 4 | [Largest Palindrome Product](https://projecteuler.net/problem=4) | [J](https://www.jsoftware.com/#/) | [p4.ijs](p4.ijs) |
+| 5 | [Smallest Multiple](https://projecteuler.net/problem=5) | [Gforth](https://gforth.org/) | [p5.fth](p5.fth) |
