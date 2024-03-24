@@ -16,3 +16,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 7 | [10001st Prime](https://projecteuler.net/problem=7) | [Squeak](https://squeak.org/) ([2.2](https://squeak.js.org/demo/simple.html)) | [p7.st](p7.st) |
 | 8 | [Largest Product in a Series](https://projecteuler.net/problem=8) | [SQL](https://en.wikipedia.org/wiki/SQL) ([SQLite](https://www.sqlite.org/index.html)) | [p8.sql](p8.sql) |
 | 9 | [Special Pythagorean Triplet](https://projecteuler.net/problem=9) | [XSLT](https://www.w3.org/TR/xslt-10/) | [p9.xsl](p9.xsl) |
+| 10 | [Summation of Primes](https://projecteuler.net/problem=10) | [COBOL-85](https://en.wikipedia.org/wiki/COBOL#COBOL-85) | [p10.cbl](p10.cbl) |
