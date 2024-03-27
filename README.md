@@ -18,3 +18,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 9 | [Special Pythagorean Triplet](https://projecteuler.net/problem=9) | [XSLT](https://www.w3.org/TR/xslt-10/) | [p9.xsl](p9.xsl) |
 | 10 | [Summation of Primes](https://projecteuler.net/problem=10) | [COBOL-85](https://en.wikipedia.org/wiki/COBOL#COBOL-85) | [p10.cbl](p10.cbl) |
 | 11 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [Perl](https://www.perl.org/) | [p11.pl](p11.pl) |
+| 12 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [WebGPU Shading Language](https://www.w3.org/TR/WGSL/) | [p12.wgsl](p12.wgsl) |
