@@ -19,3 +19,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 10 | [Summation of Primes](https://projecteuler.net/problem=10) | [COBOL-85](https://en.wikipedia.org/wiki/COBOL#COBOL-85) | [p10.cbl](p10.cbl) |
 | 11 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [Perl](https://www.perl.org/) | [p11.pl](p11.pl) |
 | 12 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [WebGPU Shading Language](https://www.w3.org/TR/WGSL/) | [p12.wgsl](p12.wgsl) |
+| 13 | [Large Sum](https://projecteuler.net/problem=13) | [AWK](https://en.wikipedia.org/wiki/AWK) | [p13.awk](p13.awk) |
