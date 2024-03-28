@@ -20,3 +20,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 11 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [Perl](https://www.perl.org/) | [p11.pl](p11.pl) |
 | 12 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [WebGPU Shading Language](https://www.w3.org/TR/WGSL/) | [p12.wgsl](p12.wgsl) |
 | 13 | [Large Sum](https://projecteuler.net/problem=13) | [AWK](https://en.wikipedia.org/wiki/AWK) | [p13.awk](p13.awk) |
+| 14 | [Longest Collatz Sequence](https://projecteuler.net/problem=14) | [WebAssembly](https://webassembly.org/) ([Text Format](https://webassembly.github.io/spec/core/text/index.html)) | [p14.wat](p14.wat) |
