@@ -24,3 +24,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 15 | [Lattice Paths](https://projecteuler.net/problem=15) | [Scratch](https://scratch.mit.edu/) | [p15.sb3](src/p15.sb3) |
 | 16 | [Power Digit Sum](https://projecteuler.net/problem=16) | [Commodore BASIC](https://en.wikipedia.org/wiki/Commodore_BASIC) ([2.0](https://www.c64-wiki.com/wiki/BASIC#BASIC_V2.0_of_C64)) | [p16.bas](src/p16.bas) |
 | 17 | [Number Letter Counts](https://projecteuler.net/problem=17) | [Verilog](https://en.wikipedia.org/wiki/Verilog) | [p17.v](src/p17.v) |
+| 18 | [Maximum Path Sum I](https://projecteuler.net/problem=18) | [XOD](https://xod.io/) | [p18.xodball](src/p18.xodball) ([screenshot](src/p18.png)) |
