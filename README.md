@@ -26,3 +26,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 17 | [Number Letter Counts](https://projecteuler.net/problem=17) | [Verilog](https://en.wikipedia.org/wiki/Verilog) | [p17.v](src/p17.v) |
 | 18 | [Maximum Path Sum I](https://projecteuler.net/problem=18) | [XOD](https://xod.io/) | [p18.xodball](src/p18.xodball) ([screenshot](src/p18.png)) |
 | 19 | [Counting Sundays](https://projecteuler.net/problem=19) | [EXA](https://www.zachtronics.com/exapunks/) ([TEC Redshift](https://store.steampowered.com/app/948420/EXAPUNKS_TEC_Redshift_Player/)) | [p19.exa](src/p19.exa) ([disc](src/p19.png)) |
+| 20 | [Factorial Digit Sum](https://projecteuler.net/problem=20) | [BBC BASIC](https://en.wikipedia.org/wiki/BBC_BASIC) | [p20.bas](src/p20.bas) |
