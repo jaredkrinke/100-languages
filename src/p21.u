@@ -1,0 +1,49 @@
+floorOfSquareRoot n =
+  n
+    |> Nat.toFloat
+    |> sqrt
+    |> floor
+    |> unsafeToInt
+    |> truncate0
+
+> floorOfSquareRoot 12
+
+divides n m = (Nat.mod n m) == 0
+
+> divides 9 3
+> divides 8 3
+
+divisors n =
+  (List.rangeClosed 1 (floorOfSquareRoot n))
+    |> (List.filter (m -> (divides n m)))
+    |> (List.map (m -> [m, n/m]))
+    |> List.join
+    |> List.distinct
+
+properDivisors n = (List.filter (m -> m != n) (divisors n))
+
+> properDivisors 12
+> properDivisors 4
+
+properDivisorSum n = (List.foldLeft (Nat.+) 0 (properDivisors n))
+
+> properDivisorSum 12
+
+nToSum = Map.fromList (List.map (n -> (n, (properDivisorSum n))) (List.range 1 10000))
+
+> Map.get 220 nToSum
+> Map.get 284 nToSum
+
+amicablePairs =
+  Map.toList nToSum
+    |> List.filter (cases (n, sum) -> (n != sum) && (n == (properDivisorSum sum)))
+
+amicableNumbers =
+  amicablePairs
+    |> List.map (cases (n, sum) -> [n, sum])
+    |> List.join
+    |> List.distinct
+
+amicableNumbersSum = List.foldLeft (Nat.+) 0 amicableNumbers
+
+> amicableNumbersSum
