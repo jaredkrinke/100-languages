@@ -18,7 +18,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 9 | [Special Pythagorean Triplet](https://projecteuler.net/problem=9) | [XSLT](https://www.w3.org/TR/xslt-10/) | [p9.xsl](src/p9.xsl) |
 | 10 | [Summation of Primes](https://projecteuler.net/problem=10) | [COBOL-85](https://en.wikipedia.org/wiki/COBOL#COBOL-85) | [p10.cbl](src/p10.cbl) |
 | 11 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [Perl](https://www.perl.org/) | [p11.pl](src/p11.pl) |
-| 12 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [WebGPU Shading Language](https://www.w3.org/TR/WGSL/) | [p12.wgsl](src/p12.wgsl) |
+| 12 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [WebGPU Shading Language](https://www.w3.org/TR/WGSL/) | [p12.wgsl](src/p12.wgsl) ([HTML host](src/p12.html)) |
 | 13 | [Large Sum](https://projecteuler.net/problem=13) | [AWK](https://en.wikipedia.org/wiki/AWK) | [p13.awk](src/p13.awk) |
 | 14 | [Longest Collatz Sequence](https://projecteuler.net/problem=14) | [WebAssembly](https://webassembly.org/) ([Text Format](https://webassembly.github.io/spec/core/text/index.html)) | [p14.wat](src/p14.wat) |
 | 15 | [Lattice Paths](https://projecteuler.net/problem=15) | [Scratch](https://scratch.mit.edu/) | [p15.sb3](src/p15.sb3) |
