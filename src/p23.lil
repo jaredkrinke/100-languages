@@ -1,0 +1,48 @@
+## Project Euler problem 23
+
+local top: 28123
+
+# Sum proper divisors
+on pdivsum n do
+  sum extract first value by value where !(n = value) from raze extract value, n / value where (value % n) = 0 from 1 + range sqrt n
+end
+
+# Find abundant numbers
+local abundants: extract value where (pdivsum @ value) > value from 1 + range top
+
+# Note: List and dictionary look-ups don't appear to be constant time, and (mutable) interfaces like "array[]" are
+# technically extensions, so repurpose a string to represent a set of natural numbers here. Aside: "array[]" (when
+# available) is significantly faster than (mis-)using a string like this.
+
+# Use "n" for "was never a sum of two abundant numbers" on a string indexed by number
+local summable: "n"
+local i: 0
+while i < top
+  i: i + 1
+  summable[i]: "n"
+end
+
+# Set all abundant number sums to "y"
+local c: count abundants
+i: 0
+while i < c
+  local j: i
+  local ai: abundants[i]
+
+  # Bail out of the loop early with this flag (abundants is in ascending order)
+  local good: 1
+  while good & (j < c)
+    local s: ai + abundants[j]
+    if (s > top)
+      good: 0
+    else
+      summable[s]: "y"
+    end
+    j: j + 1
+  end
+  i: i + 1
+end
+
+# Add up all the indices of "n"
+local result: sum extract index where value = "n" from summable
+show[result]

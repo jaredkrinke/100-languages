@@ -29,3 +29,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 20 | [Factorial Digit Sum](https://projecteuler.net/problem=20) | [BBC BASIC](https://en.wikipedia.org/wiki/BBC_BASIC) | [p20.bas](src/p20.bas) |
 | 21 | [Amicable Numbers](https://projecteuler.net/problem=21) | [Unison](https://www.unison-lang.org/) | [p21.u](src/p21.u) |
 | 22 | [Names Scores](https://projecteuler.net/problem=22) | [TCL](https://en.wikipedia.org/wiki/Tcl) | [p22.tcl](src/p22.tcl) |
+| 23 | [Non-Abundant Sums](https://projecteuler.net/problem=23) | [Lil](https://beyondloom.com/tools/trylil.html) | [p23.lil](src/p23.lil) |
