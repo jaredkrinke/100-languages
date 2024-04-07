@@ -1,0 +1,83 @@
+%!PS
+%%Title: Project Euler problem 24
+
+% iterations (variable): count of iterations
+/iterations 0 def
+
+% iterations++ (--): increment counter and run "stop" if threshold reached
+/iterations++ {
+    /iterations dup load 1 add store
+    /iterations load 1000000 ge { stop } if
+} def
+
+% copyexcept ( string char -- stringnochar ): Copy string, except removing char (assumes exactly 1 instance of char)
+/copyexcept {
+    1 index length 1 sub string % Create result string that is 1 character shorter (string char result)
+    0                           % Index in result (string char result i)
+    3 index {
+        % Check for c = char (string char result i c)
+        dup 4 index eq
+        {
+            % Character to remove; do nothing
+            pop
+        }
+        {
+            % Other character; copy and increment index
+            3 copy put
+            pop
+            1 add
+        }
+        ifelse
+    } forall
+    pop
+    3 1 roll pop pop
+} def
+
+% permute* ( index choices result -- ): Recursively construct all permutations, running "stop" when "iterations" hits 1 million
+/permute* {
+    1 index length 0 eq
+    {
+        % choices is empty, meaning recursion is done
+        3 1 roll pop pop    % Leave only result on the stack
+        iterations++        % Check for completion
+        pop                 % Not done; pop result off
+    }
+    {
+        % choices isn't empty; loop through choices and recurse
+        1 index {
+            % (index choices result choice)
+            1 index 4 index 2 index put         % Set choice in result
+            3 index 1 add exch                  % Increment index for recursion (index choices result index+1 choice)
+            3 index exch copyexcept             % Create remaining choice list (index choices result index+1 rchoices)
+            2 index                             % (... index+1 rchoices result)
+            permute*
+        } forall
+
+        % Drop the three arguments and return nothing
+        pop pop pop
+    }
+    ifelse
+} bind def % TODO: Figure out why "bind" appears unnecessary
+
+% permute ( string -- ): Construct all permutations of string, running "stop" when "iterations" hits 1 million
+/permute {
+    0 exch              % Start at index 0, with all choices available (0 string)
+    dup length string   % Create empty string (0 string result)
+    /iterations 0 store % Reset counter
+    permute*
+} def
+
+% Construct 1 million (ordered) permutations within a "stopped" context and output the most recent permutation
+{
+    (0123456789)
+    permute
+} stopped
+pop % Assume it worked
+
+% Log to console and display result
+dup =
+/Courier 36 selectfont
+50 500 moveto
+show
+clear
+showpage
