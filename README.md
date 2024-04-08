@@ -31,3 +31,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 22 | [Names Scores](https://projecteuler.net/problem=22) | [TCL](https://en.wikipedia.org/wiki/Tcl) | [p22.tcl](src/p22.tcl) |
 | 23 | [Non-Abundant Sums](https://projecteuler.net/problem=23) | [Lil](https://beyondloom.com/tools/trylil.html) | [p23.lil](src/p23.lil) |
 | 24 | [Lexicographic Permutations](https://projecteuler.net/problem=24) | [PostScript](https://en.wikipedia.org/wiki/PostScript) | [p24.ps](src/p24.ps) |
+| 25 | [1000-digit Fibonacci Number](https://projecteuler.net/problem=25) | [fe](https://github.com/rxi/fe) | [p25.fe](src/p25.fe) |

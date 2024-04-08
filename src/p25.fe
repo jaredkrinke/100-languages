@@ -1,0 +1,96 @@
+;;;; Project Euler problem 25
+
+;;; The stand-alone fe interpreter only has (by default) 64,000 bytes
+;;; of memory and, on 64-bit architectures, each cons cell is 16 bytes
+;;; (two 8-byte pointers), implying a maximum of 4,000 cons
+;;; cells. But... numbers are *also* objects, and thus take up 16
+;;; bytes each, so a list of 1,000 numbers is 32,000 bytes, meaning
+;;; that two such lists won't fit.
+
+;;; Solution: only store one copy of each digit, then just represent
+;;; large numbers as lists of decimal digits.
+
+;;; Digits
+(= zero 0)
+(= one 1)
+(= two 2)
+(= three 3)
+(= four 4)
+(= five 5)
+(= six 6)
+(= seven 7)
+(= eight 8)
+(= nine 9)
+
+;;; Utilities
+(= swap (mac (a b)
+  (list 'do
+	(list 'let 'tmp b)
+	(list '= b a)
+	(list '= a 'tmp))))
+
+(= length (fn (l)
+  (let n 0)
+  (while l
+    (= n (+ n 1))
+    (= l (cdr l)))
+  n))
+
+(= number->digit (fn (number)
+  (if (is number 0) zero
+      (is number 1) one
+      (is number 2) two
+      (is number 3) three
+      (is number 4) four
+      (is number 5) five
+      (is number 6) six
+      (is number 7) seven
+      (is number 8) eight
+      (is number 9) nine)))
+      
+;;; Representation of (nonnegative) big integers
+(= make-digit (fn (digit)
+  (cons digit nil)))
+
+(= make-zero (fn ()
+  (make-digit zero)))
+
+;;; Decimal adder (result <- a + b)
+(= add (fn (a b result)
+  (let carry 0)
+  (let first t)
+  (while (or (car a)
+	     (car b)
+	     (< 0 carry))
+    (let sum (+ (or (car a) 0)
+		(or (car b) 0)
+		carry))
+    (if (< sum 10)
+	(= carry 0)
+	(do (= carry 1)
+	    (= sum (- sum 10))))
+    ;; Advance result index
+    (if first
+	(= first nil)
+        (= result (or (cdr result)
+		      (do (setcdr result (make-zero))
+			  (cdr result)))))
+    (setcar result (number->digit sum))
+    (= a (cdr a))
+    (= b (cdr b)))
+  (setcdr result nil)))
+
+;;; Fibonacci sequence
+(= fibn-2 (make-digit one))
+(= fibn-1 (make-digit one))
+(= n 2)
+
+;;; Find index at which desired number of digits is present
+(while (< (length fibn-1) 1000)
+  ;; Overwrite fibn-2 with the sum -- this optimization probably isn't
+  ;; necessary, but it was an early attempt to reduce memory usage
+  (add fibn-2 fibn-1 fibn-2)
+  (= n (+ n 1))
+  (swap fibn-2 fibn-1))
+
+(print n)
