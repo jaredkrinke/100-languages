@@ -9,6 +9,9 @@ bits 16				; 16-bit ("real") mode
 org 0x7c00
 
 ;;; Entry point
+init:
+	mov ax, 0		; Set ds=0 by way of ax
+	mov ds, ax		; Supposedly necessary for BIOS API
 start:
 	mov bx, 0		; Counter
 	mov dx, 0		; Best number
@@ -103,7 +106,7 @@ period_divide:
 	mov dx, 0		; Counter for loop
 	mov si, sp
 period_check:			; Check if remainder has been seen before
-	add si, 4
+	add si, 2		; Advance through list of remainders (each 2 bytes)
 	add dx, 1
 	cmp dx, di		; Check if done looking
 	je period_test
