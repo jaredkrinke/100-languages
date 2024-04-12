@@ -8,10 +8,14 @@
 bits 16				; 16-bit ("real") mode
 org 0x7c00
 
-;;; Entry point
+;;; Required initialization
 init:
 	mov ax, 0		; Set ds=0 by way of ax
 	mov ds, ax		; Supposedly necessary for BIOS API
+	mov ss, ax		; Also stack segment to zero
+	mov sp, 0x7c00		; Initialize stack pointer
+
+;;; Solution code starts here
 start:
 	mov bx, 0		; Counter
 	mov dx, 0		; Best number
