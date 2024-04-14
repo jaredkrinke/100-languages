@@ -33,4 +33,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 24 | [Lexicographic Permutations](https://projecteuler.net/problem=24) | [PostScript](https://en.wikipedia.org/wiki/PostScript) | [p24.ps](src/p24.ps) |
 | 25 | [1000-digit Fibonacci Number](https://projecteuler.net/problem=25) | [fe](https://github.com/rxi/fe) | [p25.fe](src/p25.fe) |
 | 26 | [Reciprocal Cycles](https://projecteuler.net/problem=26) | [x86 assembly](https://en.wikipedia.org/wiki/X86) (BIOS) | [p26.asm](src/p26.asm) ([boot sector](src/p26.img)) |
-| 27 | [Reciprocal Cycles](https://projecteuler.net/problem=27) | [RetroForth](http://retroforth.org/) | [p27.forth](src/p27.forth) |
+| 27 | [Quadratic Primes](https://projecteuler.net/problem=27) | [RetroForth](http://retroforth.org/) | [p27.forth](src/p27.forth) |
