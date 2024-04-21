@@ -1,0 +1,122 @@
+( ===== Devices ===== )
+|10 @Console &vector $2 &read $1 &pad $5 &write $1 &error $1
+
+( ===== Macros ===== )
+%EMIT { .Console/write DEO }
+%NL { #0a EMIT }
+%CALL { JSR2 }
+%RET { JMP2r }
+%DEC2 { #0001 SUB2 }
+
+( pp -- value (and address stored at pp is incremented) )
+%LOAD++ { DUP2 .s1 STZ2 LDA2 LDAk ROT ROT INC2 .s1 LDZ2 STA2 }
+
+( ===== Registers ===== )
+|0000
+@x $2
+@carry $1
+@s1 $2
+
+( ===== Entry point ===== )
+|0100
+    ( Initialization: set squares to: (width - 1) / 2 )
+    ;width LDA2 #0001 SUB2 #01 SFT2 ;squares STA2
+    #0000 .x STZ2
+
+    ( Loop over squares )
+    &square-loop
+        ( Update delta to: xv + 1 )
+        #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 ;delta ;store10 CALL
+        ;delta ;two ;add10 CALL ;delta ;store10 CALL
+        ;delta ;xv ;add10 CALL ;delta ;store10 CALL
+
+        ( Compute 4 diagonal numbers and add them all to total )
+        ;number ;delta ;add10 CALL ;number ;store10 CALL
+        ;total ;number ;add10 CALL ;total ;store10 CALL
+        ;number ;delta ;add10 CALL ;number ;store10 CALL
+        ;total ;number ;add10 CALL ;total ;store10 CALL
+        ;number ;delta ;add10 CALL ;number ;store10 CALL
+        ;total ;number ;add10 CALL ;total ;store10 CALL
+        ;number ;delta ;add10 CALL ;number ;store10 CALL
+        ;total ;number ;add10 CALL ;total ;store10 CALL
+
+        ( xv += 2 )
+        ;xv ;two ;add10 CALL ;xv ;store10 CALL
+        .x LDZ2 INC2 .x STZ2k POP ;squares LDA2 LTH2 ;&square-loop JCN2
+
+    ;total ;print10 CALL
+
+    BRK
+
+( ===== Local variables ===== )
+@width 03e9 ( width of outer square, from problem description )
+@squares $2 ( number of squares )
+
+@two 02 00 00 00 00 00 00 00 00 00
+@number 01 00 00 00 00 00 00 00 00 00   ( diagonal number )
+@total 01 00 00 00 00 00 00 00 00 00    ( sum of diagonal numbers )
+@xv 00 00 00 00 00 00 00 00 00 00
+@delta $a                               ( length of sides )
+
+( ===== Subroutines ===== )
+
+( 10-digit decimal numbers (least significant digit first) )
+@store10 ( b1 b2 ... b10 addr -- )
+    #0009 ADD2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STAk ROT POP DEC2
+    STA
+    RET
+
+@print10 ( addr -- )
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDAk LIT "0 ADD ROT ROT INC2
+    LDA LIT "0 ADD
+    EMIT EMIT EMIT EMIT EMIT EMIT EMIT EMIT EMIT EMIT
+    NL
+    RET
+
+@add10 ( addr1 addr2 -- b10 b9 ... b1 )
+    ( Initialization )
+    #00 .carry STZ
+    ;&b STA2
+    ;&a STA2
+    #00 ,&count STR
+
+    ( Add digits )
+    &add-digit
+        .carry LDZ
+        #00 .carry STZ
+        ;&a LOAD++
+        ;&b LOAD++
+        ADD ADD
+
+        ( Check for carry )
+        DUP #0a LTH ,&no-carry JCN
+        #01 .carry STZ
+        #0a SUB
+
+        &no-carry
+        ,&count LDR INC DUP ,&count STR
+        #0a LTH ,&add-digit JCN
+
+    RET
+
+    ( Local variables )
+    &count $1
+    &a $2
+    &b $2

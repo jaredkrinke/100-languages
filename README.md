@@ -34,3 +34,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 25 | [1000-digit Fibonacci Number](https://projecteuler.net/problem=25) | [fe](https://github.com/rxi/fe) | [p25.fe](src/p25.fe) |
 | 26 | [Reciprocal Cycles](https://projecteuler.net/problem=26) | [x86 assembly](https://en.wikipedia.org/wiki/X86) (BIOS) | [p26.asm](src/p26.asm) ([boot sector](src/p26.img)) |
 | 27 | [Quadratic Primes](https://projecteuler.net/problem=27) | [RetroForth](http://retroforth.org/) | [p27.forth](src/p27.forth) |
+| 28 | [Number Spiral Diagonals](https://projecteuler.net/problem=28) | [Uxntal](https://wiki.xxiivv.com/site/uxntal.html) | [p28.tal](src/p28.tal) |
