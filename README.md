@@ -37,3 +37,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 28 | [Number Spiral Diagonals](https://projecteuler.net/problem=28) | [Uxntal](https://wiki.xxiivv.com/site/uxntal.html) | [p28.tal](src/p28.tal) |
 | 29 | [Distinct Powers](https://projecteuler.net/problem=29) | [APL](https://en.wikipedia.org/wiki/APL_(programming_language)) | [p29.apl](src/p29.apl) |
 | 30 | [Digit Fifth Powers](https://projecteuler.net/problem=30) | [Factor](https://factorcode.org/) | [p30.factor](src/p30.factor) |
+| 31 | [Coin Sums](https://projecteuler.net/problem=31) | [Rebol](http://www.rebol.com/) | [p31.r](src/p31.r) |
