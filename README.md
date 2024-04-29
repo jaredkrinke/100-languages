@@ -39,3 +39,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 30 | [Digit Fifth Powers](https://projecteuler.net/problem=30) | [Factor](https://factorcode.org/) | [p30.factor](src/p30.factor) |
 | 31 | [Coin Sums](https://projecteuler.net/problem=31) | [Rebol](http://www.rebol.com/) | [p31.r](src/p31.r) |
 | 32 | [Pandigital Products](https://projecteuler.net/problem=32) | [Bash](https://www.gnu.org/software/bash/) | [p32.sh](src/p32.sh) |
+| 33 | [Digit Cancelling Fractions](https://projecteuler.net/problem=33) | [Julia](https://julialang.org/) | [p33.jl](src/p33.jl) |
