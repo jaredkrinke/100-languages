@@ -40,3 +40,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 31 | [Coin Sums](https://projecteuler.net/problem=31) | [Rebol](http://www.rebol.com/) | [p31.r](src/p31.r) |
 | 32 | [Pandigital Products](https://projecteuler.net/problem=32) | [Bash](https://www.gnu.org/software/bash/) | [p32.sh](src/p32.sh) |
 | 33 | [Digit Cancelling Fractions](https://projecteuler.net/problem=33) | [Julia](https://julialang.org/) | [p33.jl](src/p33.jl) |
+| 34 | [Digit Factorials](https://projecteuler.net/problem=34) | [Piet](https://www.dangermouse.net/esoteric/piet.html) | [p34.png](src/p34.png) ([ppm](src/p34.ppm), [scaled](src/p34-scaled.png)) |
