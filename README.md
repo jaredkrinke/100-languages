@@ -41,3 +41,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 32 | [Pandigital Products](https://projecteuler.net/problem=32) | [Bash](https://www.gnu.org/software/bash/) | [p32.sh](src/p32.sh) |
 | 33 | [Digit Cancelling Fractions](https://projecteuler.net/problem=33) | [Julia](https://julialang.org/) | [p33.jl](src/p33.jl) |
 | 34 | [Digit Factorials](https://projecteuler.net/problem=34) | [Piet](https://www.dangermouse.net/esoteric/piet.html) | [p34.png](src/p34.png) ([ppm](src/p34.ppm), [scaled](src/p34-scaled.png)) |
+| 35 | [Circular Primes](https://projecteuler.net/problem=35) | [Turbo Pascal](https://en.wikipedia.org/wiki/Turbo_Pascal) ([7.0](https://archive.org/details/turbopascal7.0)) | [p35.pas](src/p35.pas) |
