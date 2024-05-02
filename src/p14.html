@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html><body>
+<!-- Host file for running p14.wgsl -->
+<script>
+WebAssembly.instantiateStreaming(fetch("p14.wasm"), { console: { log: (n) => console.log(n) } });
+</script>
+</body></html>
