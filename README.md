@@ -43,3 +43,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 34 | [Digit Factorials](https://projecteuler.net/problem=34) | [Piet](https://www.dangermouse.net/esoteric/piet.html) | [p34.png](src/p34.png) ([ppm](src/p34.ppm), [scaled](src/p34-scaled.png)) |
 | 35 | [Circular Primes](https://projecteuler.net/problem=35) | [Turbo Pascal](https://en.wikipedia.org/wiki/Turbo_Pascal) ([7.0](https://archive.org/details/turbopascal7.0)) | [p35.pas](src/p35.pas) |
 | 36 | [Double-base Palindromes](https://projecteuler.net/problem=36) | [Hare](https://harelang.org/) | [p36.ha](src/p36.ha) |
+| 37 | [Truncatable Primes](https://projecteuler.net/problem=37) | [Wren](https://wren.io/) | [p37.wren](src/p37.wren) |
