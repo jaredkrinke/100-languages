@@ -1,0 +1,20 @@
+function isPandigital(n: String): Boolean =
+  (n.length == 9)
+  && (n.chars.sort() == List("1", "2", "3", "4", "5", "6", "7", "8", "9"))
+
+function concatenateProduct(n: Int, k: Int): String =
+  IntSeq(1, n)
+    .map((i) -> "\(i * k)")
+    .reduce((a, b) -> a + b)
+
+result =
+  IntSeq(2, 9)
+    .toList()
+    .flatMap((n) ->
+      IntSeq(1, (10**(9/n)).toInt())
+        .toList()
+        .map((k) -> concatenateProduct(n, k))
+        .filter((s) -> isPandigital(s))
+        .map((s) -> s.toInt()))
+    .sort()
+    .reverse()[0]
