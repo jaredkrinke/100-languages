@@ -46,3 +46,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 37 | [Truncatable Primes](https://projecteuler.net/problem=37) | [Wren](https://wren.io/) | [p37.wren](src/p37.wren) |
 | 38 | [Pandigital Multiples](https://projecteuler.net/problem=38) | [Pkl](https://pkl-lang.org/index.html) | [p38.pkl](src/p38.pkl) |
 | 39 | [Integer Right Triangles](https://projecteuler.net/problem=39) | [قلب](https://nas.sr/%D9%82%D9%84%D8%A8/) | [p39.qlb](src/p39.qlb) |
+| 40 | [Champernowne's Constant](https://projecteuler.net/problem=40) | [Roc](https://www.roc-lang.org/) | [p40.roc](src/p40.roc) |
