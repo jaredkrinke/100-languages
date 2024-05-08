@@ -49,3 +49,6 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 40 | [Champernowne's Constant](https://projecteuler.net/problem=40) | [Roc](https://www.roc-lang.org/) | [p40.roc](src/p40.roc) |
 | 41 | [Pandigital Prime](https://projecteuler.net/problem=41) | [wax](https://github.com/LingDong-/wax) | [p41.wax](src/p41.wax) |
 | 42 | [Coded Triangle Numbers](https://projecteuler.net/problem=42) | [Boron](https://urlan.sourceforge.io/boron/) | [p42.b](src/p42.b) |
+| 43 | [Sub-string Divisibility](https://projecteuler.net/problem=43) | TBD | TBD |
+| 44 | [Pentagon Numbers](https://projecteuler.net/problem=44) | TBD | TBD |
+| 45 | [Triangular, Pentagonal, and Hexagonal](https://projecteuler.net/problem=45) | TBD | TBD |
