@@ -50,5 +50,5 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 41 | [Pandigital Prime](https://projecteuler.net/problem=41) | [wax](https://github.com/LingDong-/wax) | [p41.wax](src/p41.wax) |
 | 42 | [Coded Triangle Numbers](https://projecteuler.net/problem=42) | [Boron](https://urlan.sourceforge.io/boron/) | [p42.b](src/p42.b) |
 | 43 | [Sub-string Divisibility](https://projecteuler.net/problem=43) | [Self](https://en.wikipedia.org/wiki/Self_(programming_language)) | [p43.self](src/p43.self) |
-| 44 | [Pentagon Numbers](https://projecteuler.net/problem=44) | TBD | TBD |
+| 44 | [Pentagon Numbers](https://projecteuler.net/problem=44) | [Haskell](https://www.haskell.org/) | [p44.hs](src/p44.hs) |
 | 45 | [Triangular, Pentagonal, and Hexagonal](https://projecteuler.net/problem=45) | [文言](https://wy-lang.org/) | [p45.wy](src/p45.wy) |
