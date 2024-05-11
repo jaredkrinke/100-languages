@@ -52,3 +52,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 43 | [Sub-string Divisibility](https://projecteuler.net/problem=43) | [Self](https://en.wikipedia.org/wiki/Self_(programming_language)) | [p43.self](src/p43.self) |
 | 44 | [Pentagon Numbers](https://projecteuler.net/problem=44) | [Haskell](https://www.haskell.org/) | [p44.hs](src/p44.hs) |
 | 45 | [Triangular, Pentagonal, and Hexagonal](https://projecteuler.net/problem=45) | [文言](https://wy-lang.org/) | [p45.wy](src/p45.wy) |
+| 46 | [Goldbach's Other Conjecture](https://projecteuler.net/problem=46) | [Idris](https://www.idris-lang.org/index.html) | [p46.idr](src/p46.idr) |
