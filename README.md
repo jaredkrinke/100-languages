@@ -55,3 +55,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 46 | [Goldbach's Other Conjecture](https://projecteuler.net/problem=46) | [Idris](https://www.idris-lang.org/index.html) | [p46.idr](src/p46.idr) |
 | 47 | [Distinct Primes Factors](https://projecteuler.net/problem=47) | [Nim](https://nim-lang.org/) | [p47.nim](src/p47.nim) |
 | 48 | [Self Powers](https://projecteuler.net/problem=48) | [Min](https://min-lang.org/) | [p48.min](src/p48.min) |
+| 49 | [Prime Permutations](https://projecteuler.net/problem=49) | [Cakelisp](https://macoy.me/blog/programming/CakelispIntro) | [p49.cake](src/p49.cake) |
