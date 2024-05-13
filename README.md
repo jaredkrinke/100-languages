@@ -54,3 +54,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 45 | [Triangular, Pentagonal, and Hexagonal](https://projecteuler.net/problem=45) | [文言](https://wy-lang.org/) | [p45.wy](src/p45.wy) |
 | 46 | [Goldbach's Other Conjecture](https://projecteuler.net/problem=46) | [Idris](https://www.idris-lang.org/index.html) | [p46.idr](src/p46.idr) |
 | 47 | [Distinct Primes Factors](https://projecteuler.net/problem=47) | [Nim](https://nim-lang.org/) | [p47.nim](src/p47.nim) |
+| 48 | [Self Powers](https://projecteuler.net/problem=48) | [Min](https://min-lang.org/) | [p48.min](src/p48.min) |

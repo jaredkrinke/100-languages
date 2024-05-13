@@ -1,0 +1,21 @@
+( ; Keep last 10 digits of a num (N.B. num is 64-bit)
+    symbol truncate
+    (num :n ==> num :result)
+    (n 10000000000 mod @result)
+) operator
+
+( ; Compute n^n, but only return lower 10 digits
+    symbol exp-digits
+    (num :base ==> num :result)
+    (1 (base * truncate) base times @result)
+) operator
+
+; Sum n^n for 1..1000, only keeping lower 10 digits
+0 :result
+1 :n
+(
+    result n exp-digits + truncate @result
+    n 1 + @n
+) 1000 times
+
+result puts
