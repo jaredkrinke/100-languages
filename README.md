@@ -57,3 +57,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 48 | [Self Powers](https://projecteuler.net/problem=48) | [Min](https://min-lang.org/) | [p48.min](src/p48.min) |
 | 49 | [Prime Permutations](https://projecteuler.net/problem=49) | [Cakelisp](https://macoy.me/blog/programming/CakelispIntro) | [p49.cake](src/p49.cake) |
 | 50 | [Consecutive Prime Sum](https://projecteuler.net/problem=50) | [F#](https://fsharp.org/) | [p50.fs](src/p50.fs) |
+| 51 | [Prime Digit Replacements](https://projecteuler.net/problem=51) | [Haxe](https://haxe.org/) | [p51.hx](src/p51.hx) |
