@@ -59,3 +59,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 50 | [Consecutive Prime Sum](https://projecteuler.net/problem=50) | [F#](https://fsharp.org/) | [p50.fs](src/p50.fs) |
 | 51 | [Prime Digit Replacements](https://projecteuler.net/problem=51) | [Haxe](https://haxe.org/) | [p51.hx](src/p51.hx) |
 | 52 | [Permuted Multiples](https://projecteuler.net/problem=52) | [Amiga Basic](https://en.wikipedia.org/wiki/Amiga_Basic) | [p52.bas](src/p52.bas) |
+| 53 | [Combinatoric Selections](https://projecteuler.net/problem=53) | [K](https://en.wikipedia.org/wiki/K_(programming_language)) ([oK](http://johnearnest.github.io/ok/index.html)) | [p53.k](src/p53.k) |
