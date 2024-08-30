@@ -62,3 +62,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 53 | [Combinatoric Selections](https://projecteuler.net/problem=53) | [K](https://en.wikipedia.org/wiki/K_(programming_language)) ([oK](http://johnearnest.github.io/ok/index.html)) | [p53.k](src/p53.k) |
 | 54 | [Poker Hands](https://projecteuler.net/problem=54) | [TypeScript](https://www.typescriptlang.org/) (type system only) | [p54.ts](src/p54.ts) |
 | 55 | [Lychrel Numbers](https://projecteuler.net/problem=55) | [Blazin' Forth](https://jimlawless.net/blog/posts/blazin/) | [p55.forth](src/p55.forth) ([.d64 image](src/p55.d64.zip)) |
+| 56 | [Powerful Digit Sum](https://projecteuler.net/problem=56) | [G-Pascal](https://gammon.com.au/GPascal/) | [p56.pas](src/p56.pas) |
