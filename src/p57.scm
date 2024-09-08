@@ -1,5 +1,10 @@
+(define (count-digits-internal x d)
+  (if (> x 0)
+    (count-digits-internal (floor (/ x 10)) (+ d 1))
+	d))
+
 (define (count-digits x)
-  (floor (/ (log x) (log 10))))
+  (count-digits-internal x 0))
 
 (define (match r)
   (> (count-digits (numerator r))
