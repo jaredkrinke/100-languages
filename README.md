@@ -67,7 +67,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 58 | [Spiral Primes](https://projecteuler.net/problem=58) | [BCPL](https://en.wikipedia.org/wiki/BCPL) | [p58.b](src/p58.b) |
 | 59 | [XOR Decryption](https://projecteuler.net/problem=59) | [MATLAB](https://en.wikipedia.org/wiki/MATLAB) ([GNU Octave](https://octave.org/)) | [p59.m](src/p59.m) |
 | 60 | [Prime Pair Sets](https://projecteuler.net/problem=60) | [MoonScript](https://moonscript.org/) | [p60.moon](src/p60.moon) |
-| 61 | [Cyclical Figurate Numbers](https://projecteuler.net/problem=61) | TBD |  |
+| 61 | [Cyclical Figurate Numbers](https://projecteuler.net/problem=61) | [Fennel](https://fennel-lang.org/) | [p61.fnl](src/p61.fnl) |
 | 62 | [Cubic Permutations](https://projecteuler.net/problem=62) | TBD |  |
 | 63 | [Powerful Digit Counts](https://projecteuler.net/problem=63) | TBD |  |
 | 64 | [Odd Period Square Roots](https://projecteuler.net/problem=64) | TBD |  |
