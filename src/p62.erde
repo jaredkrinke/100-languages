@@ -1,0 +1,45 @@
+-- Sort digits of n into a string
+local function sortDigits(n) {
+    local digits = {}
+    while n > 0 {
+        table.insert(digits, math.floor(n % 10))
+        n = math.floor(n / 10)
+    }
+
+    table.sort(digits)
+
+    local result = ""
+    for i = 1, #digits {
+        result ..= digits[i]
+    }
+
+    return result
+}
+
+-- Use sorted digits as key to keep track of number of cubes (and smallest cube)
+local function solve() {
+    local desiredCount = 5
+    local n = 1
+    local data = {}
+    while true {
+        -- Note: Need to ensure float here!
+        local cube = 1.0 * n * n * n
+        local digits = sortDigits(cube)
+        local d = data[digits]
+        if d {
+            d.count += 1
+            if d.count >= desiredCount {
+                return d.smallest
+            }
+        } else {
+            d = {}
+            d.smallest = cube
+            d.count = 1
+            data[digits] = d
+        }
+
+        n += 1
+    }
+}
+
+print(solve())
