@@ -70,7 +70,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 61 | [Cyclical Figurate Numbers](https://projecteuler.net/problem=61) | [Fennel](https://fennel-lang.org/) | [p61.fnl](src/p61.fnl) |
 | 62 | [Cubic Permutations](https://projecteuler.net/problem=62) | [Erde](https://erde-lang.github.io/) | [p62.erde](src/p62.erde) |
 | 63 | [Powerful Digit Counts](https://projecteuler.net/problem=63) | [Hy](https://hylang.org/) | [p63.hy](src/p63.hy) |
-| 64 | [Odd Period Square Roots](https://projecteuler.net/problem=64) | TBD |  |
+| 64 | [Odd Period Square Roots](https://projecteuler.net/problem=64) | [PureScript](https://www.purescript.org/) | [p64.purs](src/p64.purs) |
 | 65 | [Convergents of](https://projecteuler.net/problem=65) | TBD |  |
 | 66 | [Diophantine Equation](https://projecteuler.net/problem=66) | TBD |  |
 | 67 | [Maximum Path Sum II](https://projecteuler.net/problem=67) | TBD |  |
