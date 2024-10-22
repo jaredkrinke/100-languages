@@ -72,7 +72,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 63 | [Powerful Digit Counts](https://projecteuler.net/problem=63) | [Hy](https://hylang.org/) | [p63.hy](src/p63.hy) |
 | 64 | [Odd Period Square Roots](https://projecteuler.net/problem=64) | [PureScript](https://www.purescript.org/) | [p64.purs](src/p64.purs) |
 | 65 | [Convergents of e](https://projecteuler.net/problem=65) | [Ruby](https://www.ruby-lang.org/en/) | [p65.rb](src/p65.rb) |
-| 66 | [Diophantine Equation](https://projecteuler.net/problem=66) | TBD |  |
+| 66 | [Diophantine Equation](https://projecteuler.net/problem=66) | [Reason](https://reasonml.github.io/en/) | [p66.re](src/p66.re) |
 | 67 | [Maximum Path Sum II](https://projecteuler.net/problem=67) | TBD |  |
 | 68 | [Magic 5-gon Ring](https://projecteuler.net/problem=68) | TBD |  |
 | 69 | [Totient Maximum](https://projecteuler.net/problem=69) | TBD |  |
