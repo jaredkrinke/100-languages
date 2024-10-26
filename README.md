@@ -74,7 +74,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 65 | [Convergents of e](https://projecteuler.net/problem=65) | [Ruby](https://www.ruby-lang.org/en/) | [p65.rb](src/p65.rb) |
 | 66 | [Diophantine Equation](https://projecteuler.net/problem=66) | [Reason](https://reasonml.github.io/en/) | [p66.re](src/p66.re) |
 | 67 | [Maximum Path Sum II](https://projecteuler.net/problem=67) | [T3X/0](https://t3x.org/t3x/0/) | [p67.t](src/p67.t) |
-| 68 | [Magic 5-gon Ring](https://projecteuler.net/problem=68) | TBD |  |
+| 68 | [Magic 5-gon Ring](https://projecteuler.net/problem=68) | [AssemblyScript](https://www.assemblyscript.org/) | [p68.ts](src/p68.ts) |
 | 69 | [Totient Maximum](https://projecteuler.net/problem=69) | TBD |  |
 | 70 | [Totient Permutation](https://projecteuler.net/problem=70) | TBD |  |
 | 71 | [Ordered Fractions](https://projecteuler.net/problem=71) | TBD |  |
