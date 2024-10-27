@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <math.h>
 #include <stdio.h>
 
 /* Compute totients 1..n-1 (note: using n-1 so that n is the number of elements in totients) */
