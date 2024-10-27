@@ -1,8 +1,13 @@
+/* Note: some of this code is reused from Zig in the solution to
+   problem 72 (with "P72" defined to suppress e.g. main() */
+
+#ifndef P72
 #include <stdlib.h>
 #include <stdio.h>
+#endif
 
 /* Compute totients 1..n-1 (note: using n-1 so that n is the number of elements in totients) */
-static void compute_totients(unsigned int n, unsigned int *totients) {
+void compute_totients(unsigned int n, unsigned int *totients) {
     unsigned long long tmp;
     unsigned int i;
     unsigned int j;
@@ -25,6 +30,8 @@ static void compute_totients(unsigned int n, unsigned int *totients) {
         }
     }
 }
+
+#ifndef P72
 
 /* Count digits in a, storing counts in *counts */
 static void count_digits(unsigned int a, unsigned int *counts) {
@@ -86,3 +93,5 @@ int main(int argc, char **argv) {
     printf("%u\n", solve(10000000));
     return 0;
 }
+
+#endif
