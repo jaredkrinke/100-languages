@@ -1,5 +1,5 @@
 /* Note: some of this code is reused from Zig in the solution to
-   problem 72 (with "P72" defined to suppress e.g. main() */
+   problem 72 (with "P72" defined to suppress e.g. main()) */
 
 #ifndef P72
 #include <stdlib.h>
