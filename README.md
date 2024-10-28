@@ -79,7 +79,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 70 | [Totient Permutation](https://projecteuler.net/problem=70) | [C](https://en.wikipedia.org/wiki/C_(programming_language)) (C99) | [p70.c](src/p70.c) |
 | 71 | [Ordered Fractions](https://projecteuler.net/problem=71) | [Clojure](https://clojure.org/index) | [p71.clj](src/p71.clj) |
 | 72 | [Counting Fractions](https://projecteuler.net/problem=72) | [Zig](https://ziglang.org/) | [p72.zig](src/p72.zig) |
-| 73 | [Counting Fractions in a Range](https://projecteuler.net/problem=73) | TBD |  |
+| 73 | [Counting Fractions in a Range](https://projecteuler.net/problem=73) | [Raku](https://raku.org/) | [p73.raku](src/p73.raku) |
 | 74 | [Digit Factorial Chains](https://projecteuler.net/problem=74) | TBD |  |
 | 75 | [Singular Integer Right Triangles](https://projecteuler.net/problem=75) | TBD |  |
 | 76 | [Counting Summations](https://projecteuler.net/problem=76) | TBD |  |
