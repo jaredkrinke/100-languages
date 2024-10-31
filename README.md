@@ -102,7 +102,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 93 | [Arithmetic Expressions](https://projecteuler.net/problem=93) | TBD |  |
 | 94 | [Almost Equilateral Triangles](https://projecteuler.net/problem=94) | TBD |  |
 | 95 | [Amicable Chains](https://projecteuler.net/problem=95) | TBD |  |
-| 96 | [Su Doku](https://projecteuler.net/problem=96) | TBD |  |
+| 96 | [Su Doku](https://projecteuler.net/problem=96) | [Prolog](https://en.wikipedia.org/wiki/Prolog) ([SWI-Prolog](https://www.swi-prolog.org/)) | [p96.pro](src/p96.pro) |
 | 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | TBD |  |
 | 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | TBD |  |
 | 99 | [Largest Exponential](https://projecteuler.net/problem=99) | TBD |  |
