@@ -82,7 +82,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 73 | [Counting Fractions in a Range](https://projecteuler.net/problem=73) | [Raku](https://raku.org/) | [p73.raku](src/p73.raku) |
 | 74 | [Digit Factorial Chains](https://projecteuler.net/problem=74) | [Vala](https://vala.dev/) | [p74.vala](src/p74.vala) |
 | 75 | [Singular Integer Right Triangles](https://projecteuler.net/problem=75) | [Odin](https://odin-lang.org/) | [p75.odin](src/p75.odin) |
-| 76 | [Counting Summations](https://projecteuler.net/problem=76) | TBD |  |
+| 76 | [Counting Summations](https://projecteuler.net/problem=76) | [QBasic](https://en.wikipedia.org/wiki/QBasic) | [p76.bas](src/p76.bas) |
 | 77 | [Prime Summations](https://projecteuler.net/problem=77) | TBD |  |
 | 78 | [Coin Partitions](https://projecteuler.net/problem=78) | TBD |  |
 | 79 | [Passcode Derivation](https://projecteuler.net/problem=79) | TBD |  |
