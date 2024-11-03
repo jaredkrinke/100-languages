@@ -86,7 +86,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 77 | [Prime Summations](https://projecteuler.net/problem=77) | TBD |  |
 | 78 | [Coin Partitions](https://projecteuler.net/problem=78) | TBD |  |
 | 79 | [Passcode Derivation](https://projecteuler.net/problem=79) | TBD |  |
-| 80 | [Square Root Digital Expansion](https://projecteuler.net/problem=80) | TBD |  |
+| 80 | [Square Root Digital Expansion](https://projecteuler.net/problem=80) | [Python](https://www.python.org/) | [p80.py](src/p80.py) |
 | 81 | [Path Sum: Two Ways](https://projecteuler.net/problem=81) | TBD |  |
 | 82 | [Path Sum: Three Ways](https://projecteuler.net/problem=82) | TBD |  |
 | 83 | [Path Sum: Four Ways](https://projecteuler.net/problem=83) | TBD |  |
