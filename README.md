@@ -95,7 +95,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 86 | [Cuboid Route](https://projecteuler.net/problem=86) | TBD |  |
 | 87 | [Prime Power Triples](https://projecteuler.net/problem=87) | TBD |  |
 | 88 | [Product-sum Numbers](https://projecteuler.net/problem=88) | TBD |  |
-| 89 | [Roman Numerals](https://projecteuler.net/problem=89) | TBD |  |
+| 89 | [Roman Numerals](https://projecteuler.net/problem=89) | [Janet](https://janet-lang.org/) | [p89.janet](src/p89.janet) |
 | 90 | [Cube Digit Pairs](https://projecteuler.net/problem=90) | TBD |  |
 | 91 | [Right Triangles with Integer Coordinates](https://projecteuler.net/problem=91) | TBD |  |
 | 92 | [Square Digit Chains](https://projecteuler.net/problem=92) | TBD |  |
