@@ -103,7 +103,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 94 | [Almost Equilateral Triangles](https://projecteuler.net/problem=94) | TBD |  |
 | 95 | [Amicable Chains](https://projecteuler.net/problem=95) | TBD |  |
 | 96 | [Su Doku](https://projecteuler.net/problem=96) | [Prolog](https://en.wikipedia.org/wiki/Prolog) ([SWI-Prolog](https://www.swi-prolog.org/)) | [p96.pro](src/p96.pro) |
-| 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | TBD |  |
+| 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | [8080](https://en.wikipedia.org/wiki/Intel_8080) assembly ([Altair 8800](https://en.wikipedia.org/wiki/Altair_8800)) | [p97.asm](src/p97.asm) |
 | 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | TBD |  |
 | 99 | [Largest Exponential](https://projecteuler.net/problem=99) | TBD |  |
 | 100 | [Arranged Probability](https://projecteuler.net/problem=100) | TBD |  |
