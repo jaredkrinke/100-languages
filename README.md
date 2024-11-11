@@ -84,7 +84,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 75 | [Singular Integer Right Triangles](https://projecteuler.net/problem=75) | [Odin](https://odin-lang.org/) | [p75.odin](src/p75.odin) |
 | 76 | [Counting Summations](https://projecteuler.net/problem=76) | [QBasic](https://en.wikipedia.org/wiki/QBasic) | [p76.bas](src/p76.bas) |
 | 77 | [Prime Summations](https://projecteuler.net/problem=77) | [Hazel](https://hazel.org/) | [p77.hazel](src/p77.hazel) |
-| 78 | [Coin Partitions](https://projecteuler.net/problem=78) | TBD |  |
+| 78 | [Coin Partitions](https://projecteuler.net/problem=78) | [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language)) | [p78.adb](src/p78.adb) |
 | 79 | [Passcode Derivation](https://projecteuler.net/problem=79) | TBD |  |
 | 80 | [Square Root Digital Expansion](https://projecteuler.net/problem=80) | [Python](https://www.python.org/) | [p80.py](src/p80.py) |
 | 81 | [Path Sum: Two Ways](https://projecteuler.net/problem=81) | TBD |  |
