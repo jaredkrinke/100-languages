@@ -1,0 +1,32 @@
+let prime = fun n ->
+  let recurse = fun n, m ->
+    if m * m > n then true    
+    else if mod(n, m) == 0 then false   
+    else recurse(n, m + 1)   
+  in
+  if n < 2 then false   
+  else if n == 2 then true   
+  else recurse(n, 2)   
+in
+
+let countPrimeSums = fun n, primes ->
+  let recurse = fun target, l ->
+    if target < 0 then 0   
+    else if target == 0 then 1   
+    else case l
+      | [] => 0
+      | head::tail => recurse(target - head, l) + recurse(target, tail)   
+    end   
+  in
+  recurse(n, primes)   
+in
+
+let solve = fun min ->
+  let recurse = fun n, primes ->
+    if countPrimeSums(n, primes) >= min then n   
+    else recurse(n + 1, if prime(n) then n::primes else primes) 
+  in
+  recurse(1, [])   
+in
+
+solve(5000)
