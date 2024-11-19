@@ -16,7 +16,7 @@ define split (List<Char>, Char -> List<List<Char>>):
 
 // Parse input file
 define read_input (-> List<List<Int32>> +IO +Fail):
-  "0081_matrix.txt" read_file
+  "0083_matrix.txt" read_file
   '\n' split
   { empty not } filter
   { ',' split { read "Parse error" from_some } map } map
@@ -81,8 +81,12 @@ define solve_recursive (List<List<Int32>>, List<List<Bool>>, List<Pair<Int32, Pa
       matrix
       visited
       tail
+      if (i > 0):
+        (i - 1) j add_if_needed call
       if (i < (size - 1)):
         (i + 1) j add_if_needed call
+      if (j > 0):
+        i (j - 1) add_if_needed call
       if (j < (size - 1)):
         i (j + 1) add_if_needed call
       size solve_recursive
