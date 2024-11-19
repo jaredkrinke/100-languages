@@ -1,0 +1,107 @@
+// Utility for splitting strings based on delimiters (note: sadly, this is very slow...)
+define split_recursive (List<Char>, Char, List<Char>, List<List<Char>> -> List<List<Char>>):
+  -> string, delimiter, word, words;
+  match (string head_tail)
+  case some:
+    unpair -> character, tail;
+    if (character = delimiter):
+      tail delimiter [] word reverse words prepend split_recursive
+    else:
+      tail delimiter character word prepend words split_recursive
+  case none:
+    word reverse words prepend reverse
+
+define split (List<Char>, Char -> List<List<Char>>):
+  [] [] split_recursive
+
+// Parse input file
+define read_input (-> List<List<Int32>> +IO +Fail):
+  "0081_matrix.txt" read_file
+  '\n' split
+  { empty not } filter
+  { ',' split { read "Parse error" from_some } map } map
+
+// NxN matrix (fails on out-of-bounds)
+define matrix_new<T> (Int32, T -> List<List<T>>):
+  -> size, default;
+  default size replicate size replicate
+
+define matrix_set<T> (List<List<T>>, T, Int32, Int32 -> List<List<T>> +Fail):
+  -> matrix, item, i, j;
+  matrix i get "Out of bounds vertically!" from_some -> row;
+  row item j set "Out of bounds horizontally!" from_some -> new_row;
+  matrix new_row i set "Out of bounds vertically!" from_some
+
+define matrix_get<T> (List<List<T>>, Int32, Int32 -> T +Fail):
+  -> matrix, i, j;
+  matrix i get "Out of bounds vertically!" from_some
+  j get "Out of bounds horizontally!" from_some
+
+// Ordered queue (insertion sort)
+define ordered_insert<T> (List<Pair<Int32, T>>, Pair<Int32, T> -> List<Pair<Int32, T>>):
+  -> list, new;
+  new unpair  -> new_priority, new_item;
+  match (list head_tail)
+  case some:
+    unpair -> head, tail;
+    head first -> priority;
+    if (new_priority <= priority):
+      new list prepend
+    else:
+      head tail new ordered_insert prepend
+  case none:
+    [new]
+
+define position_equal (Pair<Int32, Int32>, Pair<Int32, Int32> -> Bool):
+  -> a, b;
+  a unpair -> ax, ay;
+  b unpair -> bx, by;
+  (ax = bx && { (ay = by) })
+
+// Solve by checking lowest sum paths first, until reaching the end
+define solve_recursive (List<List<Int32>>, List<List<Bool>>, List<Pair<Int32, Pair<Int32, Int32>>>, Int32 -> Int32 +Fail):
+  -> matrix, visited, queue, size;
+  match (queue head_tail)
+  case some:
+    unpair -> entry, tail;
+    entry first -> sum;
+    entry second unpair -> i, j;
+    if (i = (size - 1) && { j = (size - 1) }):
+      // Made it to the lower-right corner!
+      sum
+    else:
+      // Only add positions we haven't already encountered (since we already found the minimal path to them)
+      {
+        -> new_i, new_j;
+        new_i new_j pair -> new_position;
+        if ((visited new_i new_j matrix_get) not):
+          swap true new_i new_j matrix_set swap // Add to "visited"
+          (sum + (matrix new_i new_j matrix_get)) new_position pair ordered_insert // Add to queue
+      } -> add_if_needed;
+      matrix
+      visited
+      tail
+      if (i < (size - 1)):
+        (i + 1) j add_if_needed call
+      if (j < (size - 1)):
+        i (j + 1) add_if_needed call
+      size solve_recursive
+  case none:
+    "Logic error!" fail
+
+define solve (List<List<Int32>> -> Int32 +Fail):
+  -> matrix;
+  matrix length -> size;
+  0 0 pair -> start_position;
+  size false matrix_new -> visited;
+  [(matrix 0 0 matrix_get) start_position pair] -> queue;
+  matrix visited queue size solve_recursive
+
+// Entry point
+"Loading input file..." say
+read_input
+"Input file loaded; solving..." say
+solve
+"Solution: " print
+show say
+
