@@ -35,7 +35,7 @@ main:
     sbi 0
     sta counter+3
 
-    # Loop if needed
+    ; Loop if needed
     lda counter
     adi 0
     jnz main
