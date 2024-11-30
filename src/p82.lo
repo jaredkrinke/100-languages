@@ -1,0 +1,201 @@
+include "lib/cli.lo";
+include "lib/fs.lo";
+include "lib/int_parser.lo";
+include "lib/str_cutter.lo";
+
+// Fixed-size matrix
+struct Matrix {
+	vec: &Vec of u32,
+	width: u32,
+	height: u32,
+};
+
+fn Matrix::create(width: u32, height: u32): Matrix {
+	let matrix = .Matrix {
+		// Compiler bug reported: needed to set capacity to +1 because _grow_to_size
+		vec: Vec::with_capacity_using((width * height) + 1, sizeof u32, alloc::HEAP),
+		width: width,
+		height: height,
+	};
+
+	for i in 0..(width * height) {
+		matrix.vec.push!<u32>(0);
+	};
+
+	return matrix;
+};
+
+fn Matrix::index(matrix: Matrix, i: u32, j: u32): u32 {
+	return (i * matrix.width) + j;
+};
+
+fn Matrix::get(matrix: Matrix, i: u32, j: u32): u32 {
+	return matrix.vec.get!<u32>(matrix.index(i, j));
+};
+
+fn Matrix::set(matrix: Matrix, i: u32, j: u32, value: u32) {
+	matrix.vec.set!<u32>(matrix.index(i, j), value);
+};
+
+fn Matrix::free(matrix: Matrix) {
+	matrix.vec.free();
+};
+
+fn parse_line(matrix: Matrix, i: u32, line: str) {
+	let cutter = StrCutter::new(line);
+	let j = 0;
+	loop {
+ 		if (cutter.piece.size == 0 && cutter.rest.size == 0) {
+ 			break;
+ 		};
+ 
+		if (cutter.piece.size > 0) {
+			// Probably a compiler bug, but this only works when using an intermediate variable
+			let result = parse_u32(cutter.piece);
+			matrix.set(i, j, result.value);
+			j = j + 1;
+		};
+ 
+ 		cutter = cutter.cut_at(",");
+	};
+};
+
+fn parse_matrix(matrix: Matrix, input: str) {
+ 	let cutter = StrCutter::new(input);
+	let i = 0;
+ 	loop {
+ 		if (cutter.piece.size == 0 && cutter.rest.size == 0) {
+ 			break;
+ 		};
+ 
+ 		if (cutter.piece.size > 0) {
+			parse_line(matrix, i, cutter.piece);
+			i = i + 1;
+ 		};
+ 
+ 		cutter = cutter.cut_at("\n");
+ 	};
+};
+
+// Path-finding state
+struct State {
+	cost: u32,
+	i: u32,
+	j: u32,
+};
+
+struct Move {
+	di: i32,
+	dj: i32,
+};
+
+fn State::traverse(source: State, matrix: Matrix, move: Move): State {
+	let i = ((source.i as i32) + move.di) as u32;
+	let j = ((source.j as i32) + move.dj) as u32;
+	let cost = matrix.get(i, j);
+	return .State {
+		cost: source.cost + cost,
+		i: i,
+		j: j,
+	};
+};
+
+// Priority queue (using insertion sort)
+fn ordered_insert(vec: &Vec of State, state: State) {
+	vec.push!<State>(state);
+	let i = vec.size - 1;
+	loop {
+		if i == 0 {
+			break;
+		} else {
+			let s = vec.get!<State>(i - 1);
+			if (state.cost > s.cost) {
+				vec.swap(i, i - 1);
+				i = i - 1;
+			} else {
+				break;
+			};
+		};
+	};
+};
+
+fn unvisited(visited: Matrix, size: u32, state: State, move: Move): bool {
+	let i = (state.i as i32) + move.di;
+	let j = (state.j as i32) + move.dj;
+
+	// LO doesn't short-circuit &&
+	let result = false;
+	if (i >= (0 as i32)) && (i < (size as i32)) && (j >= (0 as i32)) && (j < (size as i32)) {
+		result = (visited.get(i as u32, j as u32) == 0);
+	};
+	return result;
+};
+
+// Use priority queue to find shortest path to each location until in the rightmost column
+fn solve(matrix: Matrix, size: u32, i: u32): u32 {
+	let visited = Matrix::create(size, size);
+	defer visited.free();
+
+	let queue = Vec::new!<State>();
+	defer queue.free();
+	
+	let moves = Vec::new!<Move>();
+	defer moves.free();
+
+	moves.push!<Move>(.Move { di: -1, dj: +0 });
+	moves.push!<Move>(.Move { di: +0, dj: +1 });
+	moves.push!<Move>(.Move { di: +1, dj: +0 });
+
+	queue.push!<State>(.State {
+		cost: matrix.get(i, 0),
+		i: i,
+		j: 0,
+	});
+
+	let result = 0;
+	loop {
+		let state = *(queue.pop_unchecked() as &State);
+		visited.set(state.i, state.j, 1);
+
+		// Check for goal
+		if (state.j == (size - 1)) {
+			result = state.cost;
+			break;
+		};
+
+		// Add prioritized moves, if not already visited
+		for i in 0..moves.size {
+			let move = moves.get!<Move>(i);
+			if unvisited(visited, size, state, move) {
+				ordered_insert(queue, state.traverse(matrix, move));
+			};
+		};
+	};
+
+	return result;
+};
+
+fn main() {
+	// Size specified in problem
+	let size = 80;
+	let matrix = Matrix::create(size, size);
+	defer matrix.free();
+
+	let input = fs::read_file!("0082_matrix.txt");
+	defer input.free();
+
+	parse_matrix(matrix, input.as_str());
+
+	let best = 100000000;
+	let i = 0;
+	for i in 0..size {
+		let result = solve(matrix, size, i);
+		if result < best {
+			best = result;
+		};
+	};
+
+	print_u32(best);
+	puts("\n");
+};
+

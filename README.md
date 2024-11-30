@@ -88,7 +88,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 79 | [Passcode Derivation](https://projecteuler.net/problem=79) | [Shen](https://shen-language.github.io/) | [p79.shen](src/p79.shen) |
 | 80 | [Square Root Digital Expansion](https://projecteuler.net/problem=80) | [Python](https://www.python.org/) | [p80.py](src/p80.py) |
 | 81 | [Path Sum: Two Ways](https://projecteuler.net/problem=81) | TBD |  |
-| 82 | [Path Sum: Three Ways](https://projecteuler.net/problem=82) | TBD |  |
+| 82 | [Path Sum: Three Ways](https://projecteuler.net/problem=82) | [LO](https://github.com/glebbash/LO) | [p82.lo](src/p82.lo) |
 | 83 | [Path Sum: Four Ways](https://projecteuler.net/problem=83) | [Kitten](https://kittenlang.org/) | [p83.ktn](src/p83.ktn) |
 | 84 | [Monopoly Odds](https://projecteuler.net/problem=84) | TBD |  |
 | 85 | [Counting Rectangles](https://projecteuler.net/problem=85) | TBD |  |
