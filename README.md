@@ -91,7 +91,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 82 | [Path Sum: Three Ways](https://projecteuler.net/problem=82) | [LO](https://github.com/glebbash/LO) | [p82.lo](src/p82.lo) |
 | 83 | [Path Sum: Four Ways](https://projecteuler.net/problem=83) | [Kitten](https://kittenlang.org/) | [p83.ktn](src/p83.ktn) |
 | 84 | [Monopoly Odds](https://projecteuler.net/problem=84) | TBD |  |
-| 85 | [Counting Rectangles](https://projecteuler.net/problem=85) | TBD |  |
+| 85 | [Counting Rectangles](https://projecteuler.net/problem=85) | [Bend](https://github.com/HigherOrderCO/bend) | [p85.bend](src/p85.bend) |
 | 86 | [Cuboid Route](https://projecteuler.net/problem=86) | TBD |  |
 | 87 | [Prime Power Triples](https://projecteuler.net/problem=87) | TBD |  |
 | 88 | [Product-sum Numbers](https://projecteuler.net/problem=88) | TBD |  |
