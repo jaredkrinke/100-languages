@@ -51,7 +51,7 @@ main:
 
     ; Add one, as given in the problem
     lda digits
-    adi 1 ; TODO
+    adi 1
     sta digits
 
     ; All done; inspect "digits" for resulting digits
