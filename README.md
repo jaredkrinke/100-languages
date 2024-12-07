@@ -93,7 +93,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 84 | [Monopoly Odds](https://projecteuler.net/problem=84) | TBD |  |
 | 85 | [Counting Rectangles](https://projecteuler.net/problem=85) | [Bend](https://github.com/HigherOrderCO/bend) | [p85.bend](src/p85.bend) |
 | 86 | [Cuboid Route](https://projecteuler.net/problem=86) | [V](https://vlang.io/) | [p86.v](src/p86.v) |
-| 87 | [Prime Power Triples](https://projecteuler.net/problem=87) | TBD |  |
+| 87 | [Prime Power Triples](https://projecteuler.net/problem=87) | [Lobster](http://strlen.com/lobster) | [p87.lobster](src/p87.lobster) |
 | 88 | [Product-sum Numbers](https://projecteuler.net/problem=88) | TBD |  |
 | 89 | [Roman Numerals](https://projecteuler.net/problem=89) | [Janet](https://janet-lang.org/) | [p89.janet](src/p89.janet) |
 | 90 | [Cube Digit Pairs](https://projecteuler.net/problem=90) | TBD |  |
