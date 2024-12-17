@@ -1,0 +1,168 @@
+( Algorithm: enumerate all possible cubes as bit vectors, filter down to only
+  cubes that even have a hope of succeeding (note: I initially missed that each
+  cube face has a *different* digit, so there's a lazy hack to throw out cubes
+  with duplicates as well), then test all combinations and count the number of
+  solutions. )
+
+( Utility functions )
+[ -1 peek ] is peer ( [ ... c ] --> c )
+[ split nip ] is after ( a n --> a[n...] )
+
+( Ranged "for" loop )
+[ stack ] is for.min
+[ stack ] is for.action
+[ for.min share i^ + ] is index ( --> n )
+[ ]'[ for.action put
+  over for.min put
+  swap -
+  times [ for.action share do ]
+  for.min release
+  for.action release ] is for ( min limit --> )
+
+( Transform { item index --> item' } each item from a nest into a new nest )
+[ stack ] is map.action
+[ ]'[ map.action put
+  dup size times [ dup i^ peek i^ map.action share do swap i^ poke ]
+  map.action release ] is map ( [ a ... z ] --> [ a' ... z' ] )
+
+( For each { item index --> } )
+[ stack ] is each.action
+[ ]'[ each.action put
+  dup size times [ dup i^ peek i^ each.action share do ]
+  drop
+  each.action release ] is each ( a --> )
+
+( Reduce { a b -> c } )
+[ stack ] is reduce.action
+[ ]'[ reduce.action put
+  over size times [
+    over i^ peek
+    reduce.action share do
+  ]
+  nip
+  reduce.action release ] is reduce ( [ a ... z ] init --> f(z, ... f(a, init)) )
+
+( Oops, missed the part about no duplicate digits -- lazy fix here )
+[ 1 rot << & ] is contains ( item digits --> b )
+[ 0 swap 10 times [
+    i^ over contains if [ swap 1 + swap ]
+  ]
+  drop
+  6 =
+] is distinct ( cube --> b )
+
+( Test if cube could possibly lead to a solution )
+[ over contains swap ] is _contains ( cube digit --> b cube )
+[ unrot or swap ] is _or ( a1 a2 cube --> a1||a2 cube )
+[ 0 _contains 1 _contains _or
+  0 _contains 4 _contains _or
+  0 _contains 9 _contains 6 _contains _or _or
+  1 _contains 6 _contains 9 _contains _or _or
+  2 _contains 5 _contains _or
+  3 _contains 6 _contains 9 _contains _or _or
+  4 _contains 9 _contains 6 _contains _or _or
+  6 _contains 9 _contains 4 _contains _or _or
+  8 _contains 1 _contains _or
+  drop 8 times and ] is possible ( cube --> b )
+
+( Test if two cubes can create all squares < 100 )
+[ stack ] is test.left
+[ test.left share ] is t1
+[ stack ] is test.right
+[ test.right share ] is t2
+[ test.right put
+  test.left put
+
+  0 t1 contains 1 t2 contains and
+  1 t1 contains 0 t2 contains and
+  or
+  0 t1 contains 4 t2 contains and
+  4 t1 contains 0 t2 contains and
+  or
+  0 t1 contains 9 t2 contains 6 t2 contains or and
+  9 t1 contains 6 t1 contains or 0 t2 contains and
+  or
+  1 t1 contains 6 t2 contains 9 t2 contains or and
+  6 t1 contains 9 t1 contains or 1 t2 contains and
+  or
+  2 t1 contains 5 t2 contains and
+  5 t1 contains 2 t2 contains and
+  or
+  3 t1 contains 6 t2 contains 9 t2 contains or and
+  6 t1 contains 9 t1 contains or 3 t2 contains and
+  or
+  4 t1 contains 9 t2 contains 6 t2 contains or and
+  9 t1 contains 6 t1 contains or 4 t2 contains and
+  or
+  6 t1 contains 9 t1 contains or 4 t2 contains and
+  4 t1 contains 6 t2 contains 9 t2 contains or and
+  or
+  8 t1 contains 1 t2 contains and
+  1 t1 contains 8 t2 contains and
+  or
+  8 times and
+
+  test.left release
+  test.right release
+] is test ( a1 a2 --> b )
+
+( Map digits to bit vectors (only care about presence and not count) )
+[ map [ drop 1 swap << ]
+  0 reduce | ] is bitify ( [ a ... z ] --> a...z )
+
+( Stash combinations in a global... )
+[ stack ] is combos
+[] combos put
+[ nested combos take swap join combos put ] is combinations.add ( a --> )
+[ combos share ] is combinations ( --> a )
+
+( Stash count in a global )
+[ stack ] is counts
+0 counts put
+[ counts take ] is count.get
+[ count.get 1 + counts put ] is increment
+
+( Recursively enumerate all digit combinations and map to a bit vector )
+( faces --> )
+forward is enumerate
+[
+  dup size 6 < iff [
+    dup size iff [ dup peer ] else 0 10 for [
+      dup index join enumerate
+    ]
+    drop
+  ] else [
+    ( Map to bit vector, ensure faces are distinct, and only consider cubes
+      that could lead to a solution )
+    bitify
+    dup distinct if [
+      dup possible if [
+        dup combinations.add
+      ]
+    ]
+    drop
+  ]
+] resolves enumerate
+
+
+( Initialize nest of combinations )
+say "Enumerating potentially-valid cubes..." cr
+[] enumerate
+say "Enumerated" sp combinations size echo sp say "potentially valid cubes." cr
+
+( Enumerate pairs )
+[ stack ] is left.stack
+[ left.stack share ] is left
+
+say "Processing..." sp
+combinations each [
+  dup echo sp
+  swap left.stack put
+  combinations swap after each [
+    drop left test if increment
+  ]
+  left.stack release
+]
+
+cr cr say "Solution:" sp count.get echo cr
+

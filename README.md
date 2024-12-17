@@ -96,7 +96,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 87 | [Prime Power Triples](https://projecteuler.net/problem=87) | [Lobster](http://strlen.com/lobster) | [p87.lobster](src/p87.lobster) |
 | 88 | [Product-sum Numbers](https://projecteuler.net/problem=88) | [Dylan](https://en.wikipedia.org/wiki/Dylan_(programming_language)) | [p88.dylan](src/p88.dylan) |
 | 89 | [Roman Numerals](https://projecteuler.net/problem=89) | [Janet](https://janet-lang.org/) | [p89.janet](src/p89.janet) |
-| 90 | [Cube Digit Pairs](https://projecteuler.net/problem=90) | TBD |  |
+| 90 | [Cube Digit Pairs](https://projecteuler.net/problem=90) | [Quackery](https://github.com/GordonCharlton/Quackery) | [p90.qky](src/p90.qky) |
 | 91 | [Right Triangles with Integer Coordinates](https://projecteuler.net/problem=91) | TBD |  |
 | 92 | [Square Digit Chains](https://projecteuler.net/problem=92) | TBD |  |
 | 93 | [Arithmetic Expressions](https://projecteuler.net/problem=93) | TBD |  |
