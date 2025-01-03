@@ -1,4 +1,4 @@
-; Project Euler problem 81 using PreScheme (Scheme-to-C compiler from Scheme 48)
+; Project Euler problem 81 using Pre-Scheme (Scheme-to-C compiler from Scheme 48)
 
 ; There must be some better way to get a hold of the "unit" (void?) type
 (define nil (let ((x 0)) (set! x 0)))
