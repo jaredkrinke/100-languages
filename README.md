@@ -98,7 +98,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 89 | [Roman Numerals](https://projecteuler.net/problem=89) | [Janet](https://janet-lang.org/) | [p89.janet](src/p89.janet) |
 | 90 | [Cube Digit Pairs](https://projecteuler.net/problem=90) | [Quackery](https://github.com/GordonCharlton/Quackery) | [p90.qky](src/p90.qky) |
 | 91 | [Right Triangles with Integer Coordinates](https://projecteuler.net/problem=91) | [ATS](https://www.cs.bu.edu/~hwxi/atslangweb/) | [p91.dats](src/p91.dats) |
-| 92 | [Square Digit Chains](https://projecteuler.net/problem=92) | TBD |  |
+| 92 | [Square Digit Chains](https://projecteuler.net/problem=92) | [Mouse-83](http://mouse.davidgsimpson.com/mouse83/index.html) | [p92.mou](src/p92.mou) |
 | 93 | [Arithmetic Expressions](https://projecteuler.net/problem=93) | TBD |  |
 | 94 | [Almost Equilateral Triangles](https://projecteuler.net/problem=94) | [Futhark](https://futhark-lang.org/) | [p94.fut](src/p94.fut) |
 | 95 | [Amicable Chains](https://projecteuler.net/problem=95) | TBD |  |
