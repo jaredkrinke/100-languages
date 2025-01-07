@@ -99,7 +99,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 90 | [Cube Digit Pairs](https://projecteuler.net/problem=90) | [Quackery](https://github.com/GordonCharlton/Quackery) | [p90.qky](src/p90.qky) |
 | 91 | [Right Triangles with Integer Coordinates](https://projecteuler.net/problem=91) | [ATS](https://www.cs.bu.edu/~hwxi/atslangweb/) | [p91.dats](src/p91.dats) |
 | 92 | [Square Digit Chains](https://projecteuler.net/problem=92) | [Mouse-83](http://mouse.davidgsimpson.com/mouse83/index.html) | [p92.mou](src/p92.mou) |
-| 93 | [Arithmetic Expressions](https://projecteuler.net/problem=93) | TBD |  |
+| 93 | [Arithmetic Expressions](https://projecteuler.net/problem=93) | [Cyber](https://cyberscript.dev/) | [p93.cy](src/p93.cy) |
 | 94 | [Almost Equilateral Triangles](https://projecteuler.net/problem=94) | [Futhark](https://futhark-lang.org/) | [p94.fut](src/p94.fut) |
 | 95 | [Amicable Chains](https://projecteuler.net/problem=95) | TBD |  |
 | 96 | [Su Doku](https://projecteuler.net/problem=96) | [Prolog](https://en.wikipedia.org/wiki/Prolog) ([SWI-Prolog](https://www.swi-prolog.org/)) | [p96.pro](src/p96.pro) |
