@@ -101,7 +101,7 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 92 | [Square Digit Chains](https://projecteuler.net/problem=92) | [Mouse-83](http://mouse.davidgsimpson.com/mouse83/index.html) | [p92.mou](src/p92.mou) |
 | 93 | [Arithmetic Expressions](https://projecteuler.net/problem=93) | [Cyber](https://cyberscript.dev/) | [p93.cy](src/p93.cy) |
 | 94 | [Almost Equilateral Triangles](https://projecteuler.net/problem=94) | [Futhark](https://futhark-lang.org/) | [p94.fut](src/p94.fut) |
-| 95 | [Amicable Chains](https://projecteuler.net/problem=95) | TBD |  |
+| 95 | [Amicable Chains](https://projecteuler.net/problem=95) | [Varyx](https://www.vcode.org/) | [p95.vx](src/p95.vx) |
 | 96 | [Su Doku](https://projecteuler.net/problem=96) | [Prolog](https://en.wikipedia.org/wiki/Prolog) ([SWI-Prolog](https://www.swi-prolog.org/)) | [p96.pro](src/p96.pro) |
 | 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | [8080 assembly](https://en.wikipedia.org/wiki/Intel_8080) ([Altair 8800](https://en.wikipedia.org/wiki/Altair_8800)) | [p97.asm](src/p97.asm) |
 | 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | TBD |  |

@@ -1,0 +1,80 @@
+const max = 1000000
+
+def contains(l, k)
+{
+	for n in l do
+	{
+		if n == k then
+		{
+			return true
+		}
+	}
+	return false
+}
+
+def sum_divisors(n)
+{
+	var sum = 1
+	var m = 2
+
+	# Note: There MUST be a line before "while" for it to work
+	while (m * m) <= n do
+	{
+		if (n % m) == 0 then
+		{
+			sum += m + (n / m)
+		}
+
+		m++
+	}
+
+	return sum
+}
+
+def compute_amicable_chain(m)
+{
+	var n = m
+	var smallest = max
+	var chain_length = 1
+	var seen = []
+	
+	while true do
+	{
+		seen <-- n
+		n = sum_divisors(n)
+
+		if n < smallest then
+		{
+			smallest = n
+		}
+
+		if n == m then
+		{
+			return chain_length, smallest
+		}
+
+		if (n > max) or (n < m) or contains(seen, n) then
+		{
+			return 0, max
+		}
+
+		chain_length++
+	}
+}
+
+# Entry point
+var max_length = 0
+var smallest_member = max
+for n in 1 -> (max + 1) do
+{
+	var (length, smallest) = compute_amicable_chain(n)
+	if length > max_length then
+	{
+		max_length = length
+		smallest_member = smallest
+		print smallest_member
+	}
+}
+
+print smallest_member
+
