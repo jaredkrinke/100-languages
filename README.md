@@ -104,6 +104,6 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 95 | [Amicable Chains](https://projecteuler.net/problem=95) | [Varyx](https://www.vcode.org/) | [p95.vx](src/p95.vx) |
 | 96 | [Su Doku](https://projecteuler.net/problem=96) | [Prolog](https://en.wikipedia.org/wiki/Prolog) ([SWI-Prolog](https://www.swi-prolog.org/)) | [p96.pro](src/p96.pro) |
 | 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | [8080 assembly](https://en.wikipedia.org/wiki/Intel_8080) ([Altair 8800](https://en.wikipedia.org/wiki/Altair_8800)) | [p97.asm](src/p97.asm) |
-| 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | TBD |  |
+| 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | [Rye](https://ryelang.org/) | [p98.rye](src/p98.rye) |
 | 99 | [Largest Exponential](https://projecteuler.net/problem=99) | TBD |  |
 | 100 | [Arranged Probability](https://projecteuler.net/problem=100) | TBD |  |
