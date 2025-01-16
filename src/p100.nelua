@@ -1,0 +1,35 @@
+--[[ Using B blue discs and N total discs, P(BB)=B/N*(B-1)/(N-1)=1/2, which can
+be rearranged into a negative Pell's equation using X=2N-1, Y=2B-1, and N=2:
+X^2-2Y^2=-1. There is a known solution (from squaring both sides of the
+equation) that results in a recurrence relation used below. ]]--
+
+require "string"
+
+-- First solution is trivial
+local x_1: integer = 1
+local y_1: integer = 1
+
+-- Compute next solution, using known recurrence relation
+local x: integer = x_1
+local y: integer = y_1
+
+local function total_from_x(): integer
+  return (x + 1) / 2
+end
+
+local function blue_discs_from_y(): integer
+  return (y + 1) / 2
+end
+
+repeat
+  -- Use known recurrence relation (N=2) here
+  local n: integer = 2
+  local x_next: integer = x*x_1*x_1 + n*x*y_1*y_1 + 2*n*y*y_1*x_1
+  local y_next: integer = y*x_1*x_1 + n*y*y_1*y_1 + 2*x*y_1*x_1
+  print(x .. ", " .. y .. " -> " .. x_next .. ", " .. y_next)
+  x = x_next
+  y = y_next
+until total_from_x() > 1000000000000
+
+print("Solution: " .. blue_discs_from_y())
+

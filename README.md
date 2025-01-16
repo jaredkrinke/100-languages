@@ -106,4 +106,4 @@ This repository tracks a [misguided quest to write code in 100 different program
 | 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | [8080 assembly](https://en.wikipedia.org/wiki/Intel_8080) ([Altair 8800](https://en.wikipedia.org/wiki/Altair_8800)) | [p97.asm](src/p97.asm) |
 | 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | [Rye](https://ryelang.org/) | [p98.rye](src/p98.rye) |
 | 99 | [Largest Exponential](https://projecteuler.net/problem=99) | [Rexx](https://en.wikipedia.org/wiki/Rexx) | [p99.rex](src/p99.rex) |
-| 100 | [Arranged Probability](https://projecteuler.net/problem=100) | TBD |  |
+| 100 | [Arranged Probability](https://projecteuler.net/problem=100) | [Nelua](https://nelua.io/) | [p100.nelua](src/p100.nelua) |
