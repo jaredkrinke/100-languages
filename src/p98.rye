@@ -22,7 +22,8 @@ find-anagrams: fn { l } {
   info: l |map { ::w [ w sort-word w ] } ,
   anagrams: info |map { .second } |sort |partition { , } |filter { .length? > 1 } |map { .first } ,
   info
-    |filter { ::x contains? anagrams second x } |map { .first }
+    |filter { ::x contains? anagrams second x }
+    |map { .first }
     |group { .sort-word }
     |map { .second .pairs\permutations }
     |concat\lists
