@@ -1,7 +1,7 @@
-# 100 Programming Languages ~~in 100 Days~~
-This repository tracks a [misguided quest to write code in 100 different programming languages](https://log.schemescape.com/posts/programming-languages/100-languages.html) (specifically by solving the first 100 [Project Euler](https://projecteuler.net/) problems), ~~in 100 days~~.
+# 100 Programming Languages
+This repository tracked a [misguided quest to write code in 100 different programming languages](https://log.schemescape.com/posts/programming-languages/100-languages.html), specifically by solving the first 100 [Project Euler](https://projecteuler.net/) problems, using a different--and, ideally, new to me--language for each problem.
 
-**Interested in joining an inane challenge?** Fork this repository (from [this commit](https://github.com/jaredkrinke/100-languages/commit/5c8cd905d835dea27d051bf79cdb579641ee5d00)--or use [this template](https://github.com/NathanielJS1541/100_languages_template) from NathanielJS1541) and track your progress manually using Markdown tables!
+I started this journey in March of 2024 and (after taking several breaks) finally completed it in January of 2025. Was this a good use of my time? Well, learning new programming languages is *always* a good use of one's time, so yes, it was.
 
 ## Progress
 
