@@ -1,3 +1,6 @@
+# Apologies to Julia aficionados! This code is an ugly embarrassment that
+# doesn't deserve to be associated with a beautiful language like Julia.
+
 p = 1
 for a = 0:9
     for b = 0:9
