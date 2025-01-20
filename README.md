@@ -1,9 +1,13 @@
 # 100 Programming Languages
 This repository tracked a [misguided quest to write code in 100 different programming languages](https://log.schemescape.com/posts/programming-languages/100-languages.html), specifically by solving the first 100 [Project Euler](https://projecteuler.net/) problems, using a different--and, ideally, new to me--language for each problem.
 
-Note: One goal in sharing this code is to raise awareness of less common programming languages. My understanding is that educational sharing of methods and solutions for (only!) the first 100 Project Euler problems is currently allowed. **Spoiler alert!**
+Note: my understanding is that educational sharing of methods and solutions for (only!) the first 100 Project Euler problems is currently allowed. **Spoiler alert!**
 
-## Progress
+## Suggest Improvements
+Most of these languages were new to me, so my solutions aren't always the best examples (esp. the Julia one). If you're experienced with one of these languages and are willing to share a more idiomatic solution, open a pull request! I'll leave the PR open (so it's clear it's not *my* code) and link it in the table below.
+
+## The List
+**(PR)** indicates someone has shared a more idiomatic solution in a pull request.
 
 | # | Problem | Language | Solution |
 |--:|---|---|---|
@@ -35,7 +39,7 @@ Note: One goal in sharing this code is to raise awareness of less common program
 | 26 | [Reciprocal Cycles](https://projecteuler.net/problem=26) | [x86 assembly](https://en.wikipedia.org/wiki/X86) (BIOS) | [p26.asm](src/p26.asm) ([boot sector](src/p26.img)) |
 | 27 | [Quadratic Primes](https://projecteuler.net/problem=27) | [RetroForth](http://retroforth.org/) | [p27.forth](src/p27.forth) |
 | 28 | [Number Spiral Diagonals](https://projecteuler.net/problem=28) | [Uxntal](https://wiki.xxiivv.com/site/uxntal.html) | [p28.tal](src/p28.tal) |
-| 29 | [Distinct Powers](https://projecteuler.net/problem=29) | [APL](https://en.wikipedia.org/wiki/APL_(programming_language)) | [p29.apl](src/p29.apl) |
+| 29 | [Distinct Powers](https://projecteuler.net/problem=29) | [APL](https://en.wikipedia.org/wiki/APL_(programming_language)) | [p29.apl](src/p29.apl) **([PR](https://github.com/jaredkrinke/100-languages/pull/2))** |
 | 30 | [Digit Fifth Powers](https://projecteuler.net/problem=30) | [Factor](https://factorcode.org/) | [p30.factor](src/p30.factor) |
 | 31 | [Coin Sums](https://projecteuler.net/problem=31) | [Rebol](http://www.rebol.com/) | [p31.r](src/p31.r) |
 | 32 | [Pandigital Products](https://projecteuler.net/problem=32) | [Bash](https://www.gnu.org/software/bash/) | [p32.sh](src/p32.sh) |
@@ -69,7 +73,7 @@ Note: One goal in sharing this code is to raise awareness of less common program
 | 60 | [Prime Pair Sets](https://projecteuler.net/problem=60) | [MoonScript](https://moonscript.org/) | [p60.moon](src/p60.moon) |
 | 61 | [Cyclical Figurate Numbers](https://projecteuler.net/problem=61) | [Fennel](https://fennel-lang.org/) | [p61.fnl](src/p61.fnl) |
 | 62 | [Cubic Permutations](https://projecteuler.net/problem=62) | [Erde](https://erde-lang.github.io/) | [p62.erde](src/p62.erde) |
-| 63 | [Powerful Digit Counts](https://projecteuler.net/problem=63) | [Hy](https://hylang.org/) | [p63.hy](src/p63.hy) |
+| 63 | [Powerful Digit Counts](https://projecteuler.net/problem=63) | [Hy](https://hylang.org/) | [p63.hy](src/p63.hy) **([PR](https://github.com/jaredkrinke/100-languages/pull/3))** |
 | 64 | [Odd Period Square Roots](https://projecteuler.net/problem=64) | [PureScript](https://www.purescript.org/) | [p64.purs](src/p64.purs) |
 | 65 | [Convergents of e](https://projecteuler.net/problem=65) | [Ruby](https://www.ruby-lang.org/en/) | [p65.rb](src/p65.rb) |
 | 66 | [Diophantine Equation](https://projecteuler.net/problem=66) | [Reason](https://reasonml.github.io/en/) | [p66.re](src/p66.re) |
