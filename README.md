@@ -63,7 +63,7 @@ Most of these languages were new to me, so my solutions aren't always the best e
 | 50 | [Consecutive Prime Sum](https://projecteuler.net/problem=50) | [F#](https://fsharp.org/) | [p50.fs](src/p50.fs) |
 | 51 | [Prime Digit Replacements](https://projecteuler.net/problem=51) | [Haxe](https://haxe.org/) | [p51.hx](src/p51.hx) |
 | 52 | [Permuted Multiples](https://projecteuler.net/problem=52) | [Amiga Basic](https://en.wikipedia.org/wiki/Amiga_Basic) | [p52.bas](src/p52.bas) |
-| 53 | [Combinatoric Selections](https://projecteuler.net/problem=53) | [K](https://en.wikipedia.org/wiki/K_(programming_language)) ([oK](http://johnearnest.github.io/ok/index.html)) | [p53.k](src/p53.k) |
+| 53 | [Combinatoric Selections](https://projecteuler.net/problem=53) | [K](https://en.wikipedia.org/wiki/K_(programming_language)) ([oK](http://johnearnest.github.io/ok/index.html)) | [p53.k](src/p53.k) **([PR](https://github.com/jaredkrinke/100-languages/pull/5))** |
 | 54 | [Poker Hands](https://projecteuler.net/problem=54) | [TypeScript](https://www.typescriptlang.org/) (type system only) | [p54.ts](src/p54.ts) |
 | 55 | [Lychrel Numbers](https://projecteuler.net/problem=55) | [Blazin' Forth](https://jimlawless.net/blog/posts/blazin/) | [p55.forth](src/p55.forth) ([.d64 image](src/p55.d64.zip)) |
 | 56 | [Powerful Digit Sum](https://projecteuler.net/problem=56) | [G-Pascal](https://gammon.com.au/GPascal/) | [p56.pas](src/p56.pas) |
