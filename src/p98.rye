@@ -15,8 +15,8 @@ find-anagrams: fn { l } {
   |map { .second } |sort |partition { , } |filter { .length? > 1 } |map { .first } :anagrams
   info .filter { .second .contains* anagrams }
     |map { .first }
-	  |group { .sort }
-	  |values .to-block
+    |group { .sort }
+    |values .to-block
     |map { .permute-pairs }
     |unpack
 }
@@ -25,8 +25,8 @@ find-anagrams: fn { l } {
 get-transformation: fn { pair } {
   .second :b , .first :a
   |split "" |vals\with {
-	  .map { .position?* a } |join ,
-	  .map { .position?* b } |join
+    .map { .position?* a } |join ,
+    .map { .position?* b } |join
   } |join\with "-"
 }
 
