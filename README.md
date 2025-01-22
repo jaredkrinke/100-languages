@@ -108,6 +108,6 @@ Most of these languages were new to me, so my solutions aren't always the best e
 | 95 | [Amicable Chains](https://projecteuler.net/problem=95) | [Varyx](https://www.vcode.org/) | [p95.vx](src/p95.vx) |
 | 96 | [Su Doku](https://projecteuler.net/problem=96) | [Prolog](https://en.wikipedia.org/wiki/Prolog) ([SWI-Prolog](https://www.swi-prolog.org/)) | [p96.pro](src/p96.pro) |
 | 97 | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | [8080 assembly](https://en.wikipedia.org/wiki/Intel_8080) ([Altair 8800](https://en.wikipedia.org/wiki/Altair_8800)) | [p97.asm](src/p97.asm) |
-| 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | [Rye](https://ryelang.org/) | [p98.rye](src/p98.rye) |
+| 98 | [Anagramic Squares](https://projecteuler.net/problem=98) | [Rye](https://ryelang.org/) | [p98.rye](src/p98.rye) **([PR](https://github.com/jaredkrinke/100-languages/pull/6))** |
 | 99 | [Largest Exponential](https://projecteuler.net/problem=99) | [Rexx](https://en.wikipedia.org/wiki/Rexx) | [p99.rex](src/p99.rex) |
 | 100 | [Arranged Probability](https://projecteuler.net/problem=100) | [Nelua](https://nelua.io/) | [p100.nelua](src/p100.nelua) |
