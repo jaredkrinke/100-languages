@@ -1,4 +1,5 @@
 ; Note: mostly solved using algebra
+(require hyrule [->])
 (import math)
 
 (-> (lfor n (range 1 10)
