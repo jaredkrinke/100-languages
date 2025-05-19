@@ -1,5 +1,5 @@
 # 100 Programming Languages
-This repository tracked a [misguided quest to write code in 100 different programming languages](https://log.schemescape.com/posts/programming-languages/100-languages.html), specifically by solving the first 100 [Project Euler](https://projecteuler.net/) problems, using a different--and, ideally, new to me--language for each problem.
+This repository tracked a [misguided quest to write code in 100 different programming languages](https://log.schemescape.com/posts/programming-languages/100-languages.html), specifically by solving the first 100 [Project Euler](https://projecteuler.net/) problems, using a different--and, ideally, new to me--language for each problem. For the record: no AIs were used (or harmed) in the making of this repository.
 
 Note: my understanding is that educational sharing of methods and solutions for (only!) the first 100 Project Euler problems is currently allowed. **Spoiler alert!**
 
